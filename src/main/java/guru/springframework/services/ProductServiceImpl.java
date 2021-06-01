@@ -22,6 +22,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product getProductById(Integer id) {
         return productRepository.findById(id).get();
+
     }
 
     @Override
@@ -33,4 +34,5 @@ public class ProductServiceImpl implements ProductService {
     public void deleteProduct(Integer id) {
         productRepository.deleteById(id);
     }
+
 }

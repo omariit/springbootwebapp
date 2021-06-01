@@ -22,6 +22,7 @@ public class ProductController {
     @RequestMapping(value = "/products", method = RequestMethod.GET)
     public String list(Model model){
         model.addAttribute("products", productService.listAllProducts());
+
         return "products";
     }
 
@@ -53,6 +54,7 @@ public class ProductController {
     public String delete(@PathVariable Integer id){
         productService.deleteProduct(id);
         return "redirect:/products";
+
     }
 
 }
